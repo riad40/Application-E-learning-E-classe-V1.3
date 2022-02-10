@@ -1,7 +1,7 @@
-###### Project context
-##### Vous êtes un développeur backend, votre équipe a besoin de vous pour développer le backend du login de l'application web E-Classe.
+### Project context
+### Vous êtes un développeur backend, votre équipe a besoin de vous pour développer le backend du login de l'application web E-Classe.
 
-### Vous devez, donc, répondre aux histoires suivantes :
+#### Vous devez, donc, répondre aux histoires suivantes :
 
 - Autant que Développeur backend PHP, je peux modifier la base de donnéer en ajoutant la table "comptes" contenant les données des utilisateurs de l'application.
 - Autant que Développeur backend PHP, je peux m'assurer que le formulaire est valide avant d'intérroger la base de donnée.
