@@ -19,27 +19,42 @@
   <div class="d-flex" id="page">  
 
     <?php
-      include './php/sidebar.php'
+      include './includes/sidebar.php'
     ?>
 
       <!-- Page Content -->
       <div id="content" class="container-fluid">
         
-        <?php include './php/navbar.php'?>
-         
+        <?php 
+        include './includes/navbar.php';
+        include './includes/db_conn.php';
+        ?>
+
         <div class="row mt-4 px-3">
           <div class="col my-3">
             <ul class="card1 rounded p-3" style="min-width: 255px; list-style: none;">
               <li><img src="./images/graduation.svg" alt="graduation" /></li>
               <li class="py-2">Students</li>
-              <li class="text-end fw-bold fs-2 pt-3">243</li>
+              <li class="text-end fw-bold fs-2 pt-3">
+                <?php  
+                $sql = 'SELECT * FROM studentsinfo'; 
+                $res = mysqli_query($con, $sql);
+                $blocks = mysqli_num_rows($res);
+                echo $blocks;  
+                ?></li>
             </ul>
           </div>
           <div class="col my-3">
             <ul class="card2 rounded p-3" style="min-width: 255px; list-style: none;">
               <li><img src="./images/save.svg" alt="save" /></li>
               <li class="py-2">Course</li>
-              <li class="text-end fw-bold fs-2 pt-3">13</li>
+              <li class="text-end fw-bold fs-2 pt-3">               
+                <?php 
+                $sql = 'SELECT * FROM course'; 
+                $res = mysqli_query($con, $sql);
+                $blocks = mysqli_num_rows($res);
+                echo $blocks;  
+                ?></li>
             </ul>
           </div>
           <div class="col my-3">
@@ -47,7 +62,13 @@
               <li><img src="./images/dollar.svg" alt="dollar" /></li>
               <li class="py-2">Payments</li>
               <li class="text-end fw-bold fs-2 pt-3">
-                <span class="fs-4 px-2">DHS</span>556,000
+                <span class="fs-4 px-2">DHS</span>
+              <?php
+                $sql = 'SELECT SUM(balance_amount) FROM payments_details'; 
+                $res = mysqli_query($con, $sql);
+                $col = mysqli_fetch_assoc($res);
+                echo $col['SUM(balance_amount)'];
+              ?>
               </li>
             </ul>
           </div>

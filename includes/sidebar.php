@@ -11,10 +11,10 @@
           <a href="./Dashboard.php" class="d-block nav-link text-dark my-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'Dashboard.php') echo 'btn btn-info'; ?>"><img class="pe-2"
               src="./images/house-door.svg" alt="house-door" />Home</a>
 
-          <a href="#" class="d-block nav-link text-dark my-3"><img class="pe-2" src="./images/bookmark.svg"
+          <a href="Course.php" class="d-block nav-link text-dark my-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'Course.php') echo 'btn btn-info'; ?>"><img class="pe-2" src="./images/bookmark.svg"
               alt="bookmark" />Course</a>
 
-          <a href="./Student.php" class="d-block nav-link text-dark my-3<?php if(basename($_SERVER['REQUEST_URI']) == 'Student.php') echo 'btn btn-info'; ?>"><img class="pe-2"
+          <a href="./Student.php" class="d-block nav-link text-dark my-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'Student.php') echo 'btn btn-info'; ?>"><img class="pe-2"
               src="./images/mortarboard.svg" alt="mortarboard" />Students</a>
 
           <a href="./payment.php" class="d-block nav-link text-dark my-3 <?php if(basename($_SERVER['REQUEST_URI']) == 'payment.php') echo 'btn btn-info'; ?>"><img class="pe-2"

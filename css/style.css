@@ -1,6 +1,6 @@
 /* IDEA : make a responsive sidebar */
 #sidebar {
-  height: 100vh;
+  min-height: 100vh;
   margin-left: -300px;
   background: #faffc1;
   min-width: 270px !important;
@@ -39,12 +39,6 @@
 .table {
   border-collapse: separate;
   border-spacing: 0 10px;
-}
-.table-borderless > tbody > tr > td,
-.table-borderless > tbody > tr > th,
-.table-borderless > thead > tr > td,
-.table-borderless > thead > tr > th {
-  border: none;
 }
 .tables {
   overflow-x: auto !important;
