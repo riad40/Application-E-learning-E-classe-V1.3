@@ -39,10 +39,12 @@
         <label class="mb-2 fw-bold mt-3 text-secondary">Password</label>
         <input type="password" class="form-control py-2" placeholder="Enter your password" />
       </div>
-      <a href="./Dashboard.php" class="btn fw-500 text-light btn-info w-100 my-4">
+      <button class="btn fw-500 text-light btn-info w-100 my-4">
         SIGN IN
-      </a>
-
+      </button>
+      <p class="text-center fw-500">
+          or <a href="signup.php" class="fw-bold text-info">Sign Up</a>
+      </p>
       <p class="text-center fw-500">
         Forgot your password?
         <a href="#" class="fw-bold text-info">Reset Password</a>
