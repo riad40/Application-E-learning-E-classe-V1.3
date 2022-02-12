@@ -23,7 +23,10 @@
   }
   </style>
 </head>
-
+<?php
+  require 'includes/db_conn.php';
+  require 'includes/functions.php';
+?>
 <body>
   <div class="wrapper d-flex justify-content-center align-items-center">
     <form action="#" class="bg-light w-100 mx-3 rounded p-5" style="max-width: 475px">
@@ -56,6 +59,7 @@
       </p>
     </form>
   </div>
+  
   <script src="./js/bootstrap.js"></script>
 </body>
 
