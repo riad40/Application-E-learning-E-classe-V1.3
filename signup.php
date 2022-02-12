@@ -13,9 +13,11 @@
     background: linear-gradient(69.66deg, #00c1fe 19.39%, #faffc1 96.69%);
     overflow-x: hidden;
   }
+
   .wrapper {
     height: 100vh;
   }
+
   ::placeholder {
     font-size: smaller;
   }
@@ -27,27 +29,30 @@
     <form action="#" class="bg-light w-100 mx-3 rounded p-5" style="max-width: 475px">
       <img src="./images/E-class.svg" alt="E-class" />
 
-      <h1 class="text-center fs-2 fw-bolder pt-5">SIGN IN</h1>
+      <h1 class="text-center fs-2 fw-bolder pt-5">SIGN UP</h1>
 
       <p class="text-center text-secondary fw-lighter">
-        Enter your credentials to access your account
+        Enter your credentials to create your account
       </p>
       <div class="mt-5">
+        <label class="mb-2 fw-bold text-secondary">Full Name</label>
+        <input type="email" class="form-control py-2" name="fname" placeholder="Enter your full name" />
+
         <label class="mb-2 fw-bold text-secondary">Email</label>
-        <input type="email" class="form-control py-2" placeholder="Enter your email" />
+        <input type="email" class="form-control py-2" name="email" placeholder="Enter your email" />
 
         <label class="mb-2 fw-bold mt-3 text-secondary">Password</label>
-        <input type="password" class="form-control py-2" placeholder="Enter your password" />
+        <input type="password" class="form-control py-2" name="password" placeholder="Enter your password" />
 
         <label class="mb-2 fw-bold mt-3 text-secondary">Repeat Your Password</label>
-        <input type="password" class="form-control py-2" placeholder="Repeat your password" />
+        <input type="password" class="form-control py-2" name="Rpassword" placeholder="Repeat your password" />
       </div>
-      <button class="btn fw-500 text-light btn-info w-100 my-4">
+      <button name="submit" class="btn fw-500 text-light btn-info w-100 my-4">
         SIGN UP
       </button>
       <p class="text-center fw-500">
-          You already have an account 
-          <a href="index.php" class="fw-bold text-info">Sign In</a>
+        You already have an account
+        <a href="index.php" class="fw-bold text-info">Sign In</a>
       </p>
     </form>
   </div>

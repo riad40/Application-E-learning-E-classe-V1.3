@@ -34,16 +34,16 @@
       </p>
       <div class="mt-5">
         <label class="mb-2 fw-bold text-secondary">Email</label>
-        <input type="email" class="form-control py-2" placeholder="Enter your email" />
+        <input type="email" class="form-control py-2" name="email" placeholder="Enter your email" />
 
         <label class="mb-2 fw-bold mt-3 text-secondary">Password</label>
-        <input type="password" class="form-control py-2" placeholder="Enter your password" />
+        <input type="password" class="form-control py-2" name="password" placeholder="Enter your password" />
       </div>
-      <button class="btn fw-500 text-light btn-info w-100 my-4">
+      <button name="submit" class="btn fw-500 text-light btn-info w-100 my-4">
         SIGN IN
       </button>
       <p class="text-center fw-500">
-          or <a href="signup.php" class="fw-bold text-info">Sign Up</a>
+          or <a href="signUp.php" class="fw-bold text-info">Sign Up</a>
       </p>
       <p class="text-center fw-500">
         Forgot your password?
