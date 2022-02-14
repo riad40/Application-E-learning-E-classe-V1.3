@@ -23,6 +23,12 @@
     $duration = $courses['duration'];
     $assignedBy = $courses['assigned_by'];
     $assignedAt = $courses['assigned_at'];
+
+    if (!isset($_SESSION['signin'])) {
+      header("location: index.php");
+      exit();
+    }
+    include './includes/time-logout.php';
       
 ?>
 

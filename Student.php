@@ -29,7 +29,13 @@
       <?php
       include './includes/navbar.php';
       include './includes/db_conn.php';
-    ?>
+      if (!isset($_SESSION['signin'])) {
+        header("location: index.php");
+        exit();
+      }
+      include './includes/time-logout.php';
+
+      ?>
 
       <div class="mx-4 py-3 d-flex align-items-center justify-content-between my-nav">
         <h3>Students List</h3>
