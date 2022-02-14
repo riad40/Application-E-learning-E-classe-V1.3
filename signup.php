@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/bootstrapSign-In.css" />
   <link rel="stylesheet" href="./css/bootstrap.css" />
-  <title>Sign In</title>
+  <title>Sign Up</title>
   <style>
   body {
     background: linear-gradient(69.66deg, #00c1fe 19.39%, #faffc1 96.69%);
@@ -23,13 +23,10 @@
   }
   </style>
 </head>
-<?php
-  require 'includes/db_conn.php';
-  require 'includes/functions.php';
-?>
+
 <body>
   <div class="wrapper d-flex justify-content-center align-items-center">
-    <form action="#" class="bg-light w-100 mx-3 rounded p-5" style="max-width: 475px">
+    <div class="bg-light w-100 mx-3 rounded p-5" style="max-width: 475px">
       <img src="./images/E-class.svg" alt="E-class" />
 
       <h1 class="text-center fs-2 fw-bolder pt-5">SIGN UP</h1>
@@ -37,9 +34,9 @@
       <p class="text-center text-secondary fw-lighter">
         Enter your credentials to create your account
       </p>
-      <div class="mt-5">
+      <form action="includes/signUp-script.php" method="POST" class="mt-5">
         <label class="mb-2 fw-bold text-secondary">Full Name</label>
-        <input type="email" class="form-control py-2" name="fname" placeholder="Enter your full name" />
+        <input type="text" class="form-control py-2" name="fname" placeholder="Enter your full name" />
 
         <label class="mb-2 fw-bold text-secondary">Email</label>
         <input type="email" class="form-control py-2" name="email" placeholder="Enter your email" />
@@ -49,17 +46,33 @@
 
         <label class="mb-2 fw-bold mt-3 text-secondary">Repeat Your Password</label>
         <input type="password" class="form-control py-2" name="Rpassword" placeholder="Repeat your password" />
-      </div>
-      <button name="submit" class="btn fw-500 text-light btn-info w-100 my-4">
-        SIGN UP
-      </button>
+
+        <button type="submit" name="signup" class="btn fw-500 text-light btn-info w-100 my-4">
+          SIGN UP
+        </button>
+      </form>
       <p class="text-center fw-500">
         You already have an account
         <a href="index.php" class="fw-bold text-info">Sign In</a>
       </p>
-    </form>
+      <?php
+        if (isset($_GET["error"])) {
+          if ($_GET["error"] == "emptyInput") {
+            echo '<p class="text-center">3mer lhebs</p>';
+          }
+          else if ($_GET["error"] == "invalidEmail") {
+            echo '<p class="text-center">wa zbi dkhol chi email m9ad</p>';
+          }
+          else if ($_GET["error"] == "passwordsdontmatch") {
+            echo '<p class="text-center">wa zbi dkhel the same pawd</p>';
+          }
+          else if ($_GET["error"] == "emailAlreadyExist") {
+            echo '<p class="text-center">wa zbi dkhel email dylk</p>';
+          }
+        }
+      ?>
+    </div>
   </div>
-  
   <script src="./js/bootstrap.js"></script>
 </body>
 
