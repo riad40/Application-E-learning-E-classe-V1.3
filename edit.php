@@ -24,12 +24,6 @@
     $phone = $students['phone_number'];
     $enroll = $students['enroll_number'];
     $date = $students['date_of_admession'];
-
-    if (!isset($_SESSION['signin'])) {
-      header("location: index.php");
-      exit();
-    }
-    include './includes/time-logout.php';
       
 ?>
 
