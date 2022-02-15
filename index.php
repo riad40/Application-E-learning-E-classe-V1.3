@@ -51,6 +51,12 @@
         <button type="submit" name="signin" class="btn fw-500 text-light btn-info w-100 my-4">
           SIGN IN
         </button>
+        <div class="form-check">
+          <input class="form-check-input" name="remember_me" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Remember Me
+          </label>
+        </div>
       </form>
       <p class="text-center fw-500">
         or <a href="signUp.php" class="fw-bold text-info">Sign Up</a>
