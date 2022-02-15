@@ -58,16 +58,16 @@
       <?php
         if (isset($_GET["error"])) {
           if ($_GET["error"] == "emptyInput") {
-            echo '<p class="text-center">3mer lhebs</p>';
+            echo '<div class="alert alert-danger text-center">Please fill all fileds</div>';
           }
           else if ($_GET["error"] == "invalidEmail") {
-            echo '<p class="text-center">wa zbi dkhol chi email m9ad</p>';
+            echo '<div class="alert alert-danger text-center">invalid email format</div>';
           }
           else if ($_GET["error"] == "passwordsdontmatch") {
-            echo '<p class="text-center">wa zbi dkhel the same pawd</p>';
+            echo '<div class="alert alert-danger text-center">this passwords dosen"t match</div>';
           }
           else if ($_GET["error"] == "emailAlreadyExist") {
-            echo '<p class="text-center">wa zbi dkhel email dylk</p>';
+            echo '<div class="alert alert-danger text-center">this email already exist</div>';
           }
         }
       ?>
