@@ -62,10 +62,10 @@
       <?php
         if (isset($_GET["error"])) {
           if ($_GET["error"] == "emptyInput") {
-            echo '<p class="text-center">3mer lhebs</p>';
+            echo '<div class="alert alert-danger text-center">Please fill all fileds</div>';
           }
           else if ($_GET["error"] == "wronglogin") {
-            echo '<p class="text-center">incorrect login informations</p>';
+            echo '<div class="alert alert-danger text-center">incorrect login informations</div>';
           }
         }
       ?>
