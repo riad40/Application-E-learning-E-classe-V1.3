@@ -29,7 +29,7 @@
       <?php
       include './includes/navbar.php';
       include './includes/db_conn.php';
-      if (!isset($_SESSION['signin'])) {
+      if (!isset($_SESSION['id'])) {
         header("location: index.php");
         exit();
       }

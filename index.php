@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if (isset($_SESSION['signin'])) {
+  if (isset($_SESSION['id'])) {
     header('location: Dashboard.php');
     exit();
   }
@@ -48,15 +48,11 @@
         <label class="mb-2 fw-bold mt-3 text-secondary">Password</label>
         <input type="password" class="form-control py-2" name="password" placeholder="Enter your password" />
 
-        </div>
         <button type="submit" name="signin" class="btn fw-500 text-light btn-info w-100 my-4">
           SIGN IN
         </button>
 
       </form>
-      <p class="text-center fw-500">
-        or <a href="signUp.php" class="fw-bold text-info">Sign Up</a>
-      </p>
       <p class="text-center fw-500">
         Forgot your password?
         <a href="#" class="fw-bold text-info">Reset Password</a>
