@@ -42,7 +42,7 @@
         include './includes/time-logout.php';
         ?>
 
-      <div class="row mt-4 px-3">
+      <div class="row px-3">
         <div class="col my-3">
           <ul class="card1 rounded p-3" style="min-width: 255px; list-style: none;">
             <li><img src="./images/graduation.svg" alt="graduation" /></li>
