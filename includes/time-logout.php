@@ -1,6 +1,6 @@
 
 <?php 
-    if(time() - $_SESSION['login_time'] > 10) { 
+    if(time() - $_SESSION['login_time'] > 3600) { 
         session_destroy();
         header('Location:  index.php'); 
         exit;
